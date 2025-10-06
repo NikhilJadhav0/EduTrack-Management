@@ -12,7 +12,7 @@ Our goal is to replace fragmented paper-based and disparate digital processes wi
 > Our team name reflects our commitment to creating a central, integrated platform that connects all facets of school operations.
 
 ### Team Members
-| **Name**        | **Role / Contribution** |
+| **Name**        | **Role** |
 |------------------|--------------------------|
 | **Nikhil Jadhav** | Project Lead, Backend Development, Database Architecture |
 | **Ethan Antao**  | Frontend Development, UI/UX Design, Documentation |
