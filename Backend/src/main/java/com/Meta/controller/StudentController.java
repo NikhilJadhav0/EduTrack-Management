@@ -5,14 +5,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Meta.dto.StudentDto;
+import com.Meta.entity.Student;
 import com.Meta.service.Sserv;
 import com.Meta.util.DtoMapper;
 
@@ -30,5 +34,15 @@ public class StudentController {
 	@PostMapping
 	public List<StudentDto> addStudent(@RequestParam String name,@RequestParam String adress ,@RequestParam int age,@RequestParam int number, @RequestParam int enrollmentYear){
 		return sserv.addStudent(name, adress, age, number, enrollmentYear) .stream().map(DtoMapper::toStudentDto).collect(Collectors.toList());
+	}
+	
+	@PutMapping
+	public List<StudentDto> updateStudent(@RequestBody Student student){
+		return sserv.updateStudent(student).stream().map(DtoMapper::toStudentDto).collect(Collectors.toList());
+	}
+	
+	@DeleteMapping("/{id}")
+	public List<StudentDto> deleteStudent(@PathVariable int id){
+		return sserv.deleteStudent(id).stream().map(DtoMapper::toStudentDto).collect(Collectors.toList());
 	}
 }

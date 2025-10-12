@@ -29,7 +29,7 @@ public class Teacher {
 private String department;
 
 @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-@JoinColumn(name = "user_id", referencedColumnName = "id")
+@JoinColumn(name = "id")
 private User user;
 @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true)
 private List<Course> courses;

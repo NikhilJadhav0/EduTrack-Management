@@ -23,11 +23,11 @@ public class Student {
 	private int age;
 	@Column(name = "Student_number")
 	private int number;
-	@Column(name = "Student_number")
+	@Column(name = "Student_Admission")
 	private int admissiondate;
 	
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "user_id", referencedColumnName = "id")
+	@JoinColumn(name = "id")
 	private User user;
 	public int getStudentId() {
 		return id;

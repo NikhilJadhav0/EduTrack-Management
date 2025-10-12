@@ -6,8 +6,9 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.UnsupportedJwtException;
-import io.jsonwebtoken.io.Decoders;
+
 import io.jsonwebtoken.security.Keys;
+import java.nio.charset.StandardCharsets;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,9 +33,9 @@ public class JwtTokenProvider {
     @PostConstruct
     public void init() {
 
-        byte[] keyBytes = Decoders.BASE64.decode(this.jwtSecret);
-
-        this.key = Keys.hmacShaKeyFor(keyBytes);
+     
+//Key key = 
+        this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes(StandardCharsets.UTF_8));
     }
 
     public String generateToken(String username) {

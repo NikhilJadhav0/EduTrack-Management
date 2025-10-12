@@ -9,8 +9,9 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "user")
 public class User {
+
+
 	@Id
-	@Column(name = "user_id")
 	private int id;
 	@Column(name = "Uname")
 	private String name;

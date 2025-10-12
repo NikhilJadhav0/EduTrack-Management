@@ -21,7 +21,7 @@ public class Userimp implements Userv{
 	}
 
 	@Override
-	public List<User> addUser(String name, String email, String password, int number, Role role) {
+	public List<User> addUser(String name, String email, String password, Role role) {
 		User u1 = new User();
 		u1.setName(name);
 		u1.setEmail(email);
