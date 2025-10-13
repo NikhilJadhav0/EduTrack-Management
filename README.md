@@ -15,8 +15,8 @@ Our goal is to replace fragmented paper-based and disparate digital processes wi
 | **Name**        | **Role** |
 |------------------|--------------------------|
 | **Nikhil Jadhav** | Project Lead, Backend Development, Database Architecture |
-| **Ethan Antao**  | Frontend Development, UI/UX Design, Documentation |
-| **Tushar Galande** | Database Management, API Integration, Testing & QA |
-| **Nikita Kadam** | Frontend Development, Reporting Module, Presentation Lead |
+| **Ethan Antao**  | Database Management, Documentation, Presentation Lead |
+| **Tushar Galande** | Frontend Development, API Integration, Testing & QA |
+| **Nikita Kadam** | UI/UX Design, Frontend Development, Reporting Module |
 
 ---
